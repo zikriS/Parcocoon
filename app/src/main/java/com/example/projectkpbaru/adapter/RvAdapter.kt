@@ -4,19 +4,20 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projectkpbaru.RVDataclass
-import com.example.projectkpbaru.databinding.ItemListFoodBinding
+import com.example.projectkpbaru.databinding.RvFoodBinding
 
-class RvAdapter(private val list: List<RVDataclass>) : RecyclerView.Adapter<RvAdapter.ViewHolder>() {
+class RvAdapter(private val list : List<RVDataclass>) :
+    RecyclerView.Adapter<RvAdapter.ViewHolder>() {
 
-    class ViewHolder(val binding: ItemListFoodBinding) : RecyclerView.ViewHolder(binding.root)
+    class ViewHolder(val binding : RvFoodBinding) : RecyclerView.ViewHolder(binding.root)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent : ViewGroup, viewType : Int) : ViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val binding = ItemListFoodBinding.inflate(layoutInflater)
+        val binding = RvFoodBinding.inflate(layoutInflater)
         return ViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder : ViewHolder, position : Int) {
         with(holder.binding) {
             tvHeading.text = list[position].TitlePram
             tvDesc.text = list[position].DescPram
@@ -24,5 +25,5 @@ class RvAdapter(private val list: List<RVDataclass>) : RecyclerView.Adapter<RvAd
         }
     }
 
-    override fun getItemCount(): Int = list.size
+    override fun getItemCount() : Int = list.size
 }
