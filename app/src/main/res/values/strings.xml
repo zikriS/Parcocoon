@@ -1,0 +1,85 @@
+<resources>
+
+    <string name="app_name">Parcocoon</string>
+    <string name="Alamat_email">Alamat Email</string>
+    <string name="login">LOGIN</string>
+    <string name="pengguna_baru_daftar_disini">Pengguna Baru ? Daftar Disini</string>
+    <string name="parcocoon_petshop">PARCOCOON PETSHOP</string>
+    <string name="password">Password</string>
+    <string name="selamat_datang_silahkan_login">Selamat Datang, Silahkan Login</string>
+    <string name="daftar_sign_up">Daftar / Sign UP</string>
+    <string name="alamat_email">Alamat Email</string>
+    <string name="passwordCnfrm">Password</string>
+    <string name="konfirmasi_password">Konfirmasi Password</string>
+    <string name="sudah_punya_akun_masuk_disini">Sudah Punya Akun ? Masuk Disini</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="lupa_password">Lupa Password?</string>
+    <string name="lupa_passwordFPass">Lupa Password</string>
+    <string name="silahkan_isi_alamat_email_untuk_reset_password">Silahkan isi Alamat Email Untuk Reset Password</string>
+    <string name="kirim_FPass">kirim</string>
+    <string name="loginfail">Email atau Password yang anda masukan SALAH</string>
+    <string name="home">Info Makanan</string>
+    <string name="diskusi">Diskusi</string>
+    <string name="health">Info Kesehatan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="info_makanan_dan_suplemen">Info Makanan dan Suplemen Hewan</string>
+    <string name="forum_diskusi_tentang_hewan_peliharaan">Forum Diskusi Tentang Hewan Peliharaan</string>
+    <string name="info_kesehatan_hewan_peliharaan">Info Kesehatan Hewan Peliharaan</string>
+    <string name="logout">Logout</string>
+    <string name="masukan_pesan">Masukan Pesan</string>
+    <string name="beauty">Premiun cat food</string>
+
+
+    //title
+    <string-array name="Foodtitle">
+        <item>Beuty Premium Cat Food</item>
+        <item>Bolt Tuna Ikan</item>
+        <item>Catchoize Adult</item>
+        <item>Catchoize Kitten</item>
+        <item>Excellent Pet Food</item>
+        <item>Felibite</item>
+        <item>Felibite Mother Kitten</item>
+        <item>LifeCat</item>
+        <item>Mantoel</item>
+        <item>Markotop Salmon Ayam</item>
+        <item>Me-O Adult Tuna</item>
+        <item>Me-O </item>
+        <item>MyPet</item>
+        <item>Oricat Kitten</item>
+        <item>Rajafit</item>
+        <item>Rajafit Hair and Skin</item>
+        <item>Royal Canin First Age</item>
+        <item>Whiskas</item>
+        <item>Whiskas Adult</item>
+        <item>TomsCat</item>
+        // lamd salmon dan chicken
+    </string-array>
+
+
+    //desc
+    <string-array name="Desc">
+        <item>Beuty Premium Cat Food diformulasikan untuk adult dan kitten menggunakan bahaan baku natural yang nutrisi yang difromulasikan secara seimbang.</item>
+        <item>Untuk kucing usia 1 tahun ke atas membuat kulit sehat dan bulu berkilau, serta mengurangi resiko penyakit FLUTD</item>
+        <item>Catchoize Adult untuk usia 1 tahun keatas varian salmon dan tuna, membantu kesehatan mata dan kandungan seratnya membantu melancarkan pencernaan</item>
+        <item>Catchoize Kitten untuk usia 6 sampai 12 bulan dengan protein 30% kandungan salmon dan tuna dengan susu yang disukai anak kucing</item>
+        <item>Excellent Pet Food menyehatkan kulit dan memperindah bulu dan menyehatkan mata</item>
+        <item>Kombinasi dari nutrisi alami yang disatukan dengan ribuan ekspresi cinta untuk kucing. Diperkaya dengan bahan berkualitas yang disukai &amp; dibutuhkan oleh kucing di setiap gigitannya</item>
+        <item>Felibite Mother and Kitten adalah makanan kucing multifungsi yang diformulasikan khusus untuk indukan selama hamil dan menyusui serta untuk anakan kucing umur 2 sampai 12 bulan.</item>
+        <item>Lifecat merupakan makanan kucing yang mengandung banyak vitamin ; mineral seperti vitamin B12 , Vit D Vit A, Vit E dan masih banyak lagi bahan yang sangat bermanfaat untuk kucing kesayangan anda.</item>
+        <item>Cat Food MANTOEL (Mantap Betoel) Rasa Tuna Chicken Milk,TRIPLE KIBBLE,Blended with Insight for ADULT and KITTEN</item>
+        <item>Makanan kucing murah berkualitas dengan dua variant, Tuna dan Salmon</item>
+        <item>Makanan kucing untuk usia 1 tahun keatas yang mengandung asam amino yang penting untuk penglihatan serta dapat meningkatkan penglihatan.</item>
+        <item>Nutrisi seimbang dan rasa yang sangat disukai oleh kitten, memperkuat kekebalan tubuh dan Taurine untuk kesehatan mata kucing.</item>
+        <item>Makanan Tuna untuk kesehatan kulit, bulu, pencernaan dan tulang gigi</item>
+        <item>Makanan Anak Kucing Premium Harga Ekonomis ,Formula khusus pertumbuhan anak kucing (KITTEN) mulai dari umur 1  sampai 12 bulan, untuk BULU dan KULIT yang SEHAT.</item>
+        <item>Makanan untuk usia 3 tahun sampai 10 tahun, formula khusus dari amerika untuk melengkapi nutrisi pada kucing</item>
+        <item>Rajafit hair and skin care dirancang khusus untuk menyehatkan rambut dan kulit hewan peliharaan </item>
+        <item>ROYAL CANIN Mother &amp; Babycat diformulasikan untuk memenuhi kebutuhan nutrisi induk kucing dan anaknya. Sesuai untuk induk kucing yang menyusui dan juga anak kucing berusia 1 sampai 4 bulan, makanan ini mengandung antioksidan untuk mendukung pertahanan tubuh alami anak kucing.</item>
+        <item>WHISKAS makanan kucing lengkap dan seimbang,Lengkungan WHISKAS Dry akan membantu merawat kesehatan mulut dan gigi mereka.Diperkaya dengan kalsium dan fosfor, termasuk vitamin D untuk pertumbuhan tulang dan tubuh yang sehat.</item>
+        <item>WHISKAS makanan kering kucing untuk usia diatas satu tahun rasa ikan tuna dengan sistem vital yang mendukung hewan peliharaan anda</item>
+        <item>Terbuat dari bahan sumber protein berkualitas tinggi yang dilengkapi dengan asam amino untuk menunjang pertumbuhan bulu dan regenerasi kulit.Mengandung EPA,DHA,dan Biotin untuk bulu yang lebih bercahaya dan kulit yang sehat</item>
+
+
+    </string-array>
+</resources>

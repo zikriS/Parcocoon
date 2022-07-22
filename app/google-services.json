@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "153905885636",
+    "project_id": "revisiparcocoon",
+    "storage_bucket": "revisiparcocoon.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:153905885636:android:3fcc867e64b0b6d7713491",
+        "android_client_info": {
+          "package_name": "com.example.projectkpbaru"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "153905885636-dt48sogm7dpujmum296s32cvb4vbm419.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqKkDwUvBhtg8RZao3vt_9SQvYOyMKK4Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "153905885636-dt48sogm7dpujmum296s32cvb4vbm419.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
