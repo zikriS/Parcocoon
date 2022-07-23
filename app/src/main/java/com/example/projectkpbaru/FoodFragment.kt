@@ -53,7 +53,7 @@ class FoodFragment : Fragment(R.layout.fragment_food) {
             Log.d(TAG, "Data : $result")
         }
 
-        val adapter = RvFoodAdapter(data)
+        val adapter = RvFoodAdapter(data,requireContext())
         binding.RVFragFood.adapter = adapter
         binding.RVFragFood.layoutManager = LinearLayoutManager(requireContext())
 

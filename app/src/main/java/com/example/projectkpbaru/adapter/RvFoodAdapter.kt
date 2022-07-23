@@ -1,12 +1,14 @@
 package com.example.projectkpbaru.adapter
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.projectkpbaru.RVDataclass
 import com.example.projectkpbaru.databinding.RvFoodBinding
 
-class RvFoodAdapter(private val list : List<RVDataclass>) :
+class RvFoodAdapter(private val list : List<RVDataclass>, private val mContext : Context) :
     RecyclerView.Adapter<RvFoodAdapter.ViewHolder>() {
 
     class ViewHolder(val binding : RvFoodBinding) : RecyclerView.ViewHolder(binding.root)
@@ -21,7 +23,7 @@ class RvFoodAdapter(private val list : List<RVDataclass>) :
         with(holder.binding) {
             tvHeading.text = list[position].TitlePram
             tvDesc.text = list[position].DescPram
-            titleImage.setImageResource(list[position].imagePram)
+            Glide.with(mContext).load(list[position].imagePram).fitCenter().into(titleImage)
         }
     }
 
