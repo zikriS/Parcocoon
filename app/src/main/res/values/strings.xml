@@ -36,10 +36,14 @@
     //title
 
     <string-array name="kesehatan_title">
-        <item>Tips Sehat</item>
+        <item>Tips Grooming Dengan Baik</item>
 
     </string-array>
+    //desc
+    <string-array name="DescSehat">
+        <item> Walau kucing bisa membersihkan dirinya sendiri, tetapi sebagai pemiliknya</item>
 
+    </string-array>
     <string-array name="Foodtitle">
         <item>Beuty Premium Cat Food</item>
         <item>Bolt Tuna Ikan</item>
@@ -66,7 +70,7 @@
 
 
     //desc
-    <string-array name="Desc">
+    <string-array name="DescFood">
         <item>Beuty Premium Cat Food diformulasikan untuk adult dan kitten menggunakan bahaan baku natural yang nutrisi yang difromulasikan secara seimbang.</item>
         <item>Untuk kucing usia 1 tahun ke atas membuat kulit sehat dan bulu berkilau, serta mengurangi resiko penyakit FLUTD</item>
         <item>Catchoize Adult untuk usia 1 tahun keatas varian salmon dan tuna, membantu kesehatan mata dan kandungan seratnya membantu melancarkan pencernaan</item>

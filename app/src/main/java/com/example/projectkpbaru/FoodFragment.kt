@@ -21,7 +21,7 @@ class FoodFragment : Fragment(R.layout.fragment_food) {
         binding = FragmentFoodBinding.bind(view)
 
         val title = resources.getStringArray(R.array.Foodtitle)
-        val desc = resources.getStringArray(R.array.Desc)
+        val desc = resources.getStringArray(R.array.DescFood)
         val imageArry = arrayOf(
             R.drawable.beuty_adult_cat,
             R.drawable.bolt2,
@@ -56,12 +56,6 @@ class FoodFragment : Fragment(R.layout.fragment_food) {
         val adapter = RvFoodAdapter(data,requireContext())
         binding.RVFragFood.adapter = adapter
         binding.RVFragFood.layoutManager = LinearLayoutManager(requireContext())
-
-
-
-
-
-
 
 
         binding.btnLogout.setOnClickListener {

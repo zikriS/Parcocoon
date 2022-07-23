@@ -24,6 +24,7 @@ class RvFoodAdapter(private val list : List<RVDataclass>, private val mContext :
             tvHeading.text = list[position].TitlePram
             tvDesc.text = list[position].DescPram
             Glide.with(mContext).load(list[position].imagePram).fitCenter().into(titleImage)
+
         }
     }
 
