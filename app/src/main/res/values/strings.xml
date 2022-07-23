@@ -29,9 +29,17 @@
     <string name="logout">Logout</string>
     <string name="masukan_pesan">Masukan Pesan</string>
     <string name="beauty">Premiun cat food</string>
+    <string name="grooming">Tips grooming yang baik</string>
+    <string name="selengkapnya">Lihat Selengkapnya</string>
 
 
     //title
+
+    <string-array name="kesehatan_title">
+        <item>Tips Sehat</item>
+
+    </string-array>
+
     <string-array name="Foodtitle">
         <item>Beuty Premium Cat Food</item>
         <item>Bolt Tuna Ikan</item>

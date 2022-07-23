@@ -24,7 +24,7 @@ class ForgotPassActivity : AppCompatActivity() {
             if (email.isNotEmpty()) {
                 firebaseAuth.sendPasswordResetEmail(email).addOnCompleteListener {
                     if (it.isSuccessful) {
-                        val intent = Intent(this, MainActivity::class.java)
+                        val intent = Intent(this, LoginActivity::class.java)
                         startActivity(intent)
                         Toast.makeText(
                             this,

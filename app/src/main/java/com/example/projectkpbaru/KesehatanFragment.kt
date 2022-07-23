@@ -13,6 +13,9 @@ class KesehatanFragment : Fragment(R.layout.fragment_kesehatan) {
     override fun onViewCreated(view : View, savedInstanceState : Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentKesehatanBinding.bind(view)
+
+        val title = resources.getStringArray(R.array.kesehatan_title)
+
         binding.btnLogout.setOnClickListener {
             Firebase.auth.signOut()
             startActivity(Intent(requireActivity(), LoginActivity::class.java))

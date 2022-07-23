@@ -7,7 +7,7 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.projectkpbaru.adapter.RvAdapter
+import com.example.projectkpbaru.adapter.RvFoodAdapter
 import com.example.projectkpbaru.databinding.FragmentFoodBinding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
@@ -53,7 +53,7 @@ class FoodFragment : Fragment(R.layout.fragment_food) {
             Log.d(TAG, "Data : $result")
         }
 
-        val adapter = RvAdapter(data)
+        val adapter = RvFoodAdapter(data)
         binding.RVFragFood.adapter = adapter
         binding.RVFragFood.layoutManager = LinearLayoutManager(requireContext())
 

@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.projectkpbaru.RVDataclass
 import com.example.projectkpbaru.databinding.RvFoodBinding
 
-class RvAdapter(private val list : List<RVDataclass>) :
-    RecyclerView.Adapter<RvAdapter.ViewHolder>() {
+class RvFoodAdapter(private val list : List<RVDataclass>) :
+    RecyclerView.Adapter<RvFoodAdapter.ViewHolder>() {
 
     class ViewHolder(val binding : RvFoodBinding) : RecyclerView.ViewHolder(binding.root)
 
