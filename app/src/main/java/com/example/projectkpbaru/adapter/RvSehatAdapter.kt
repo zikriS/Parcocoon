@@ -1,10 +1,12 @@
 package com.example.projectkpbaru.adapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.projectkpbaru.GroomingActivity
 import com.example.projectkpbaru.KesehatanFragment
 import com.example.projectkpbaru.RVDataclass
 import com.example.projectkpbaru.databinding.RvSehatBinding
@@ -26,7 +28,11 @@ class RvSehatAdapter(private val list: List<RVDataclass>, private val mContext:C
         with(holder.binding) {
             tvHeading.text = list[position].TitlePram
             holder.itemView.setOnClickListener{
-                onItemClick?.invoke(KesehatanFragment())
+                Intent(mContext, GroomingActivity::class.java).also {
+                    it.putExtra("description", list[position].DescPram)
+                    it.putExtra("banner", list[position].imagePram)
+                    mContext.startActivity(it)
+                }
             }
             tvDesc.text = list[position].DescPram
             Glide.with(mContext).load(list[position].imagePram).fitCenter().into(titleImage)

@@ -12,10 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Parcocoon">
         <activity
-            android:name=".InfoGrooming"
-            android:exported="false" />
-        <activity
-            android:name=".InfoGrooming2"
+            android:name=".GroomingActivity"
             android:exported="false" />
         <activity
             android:name=".ForgotPassActivity"
