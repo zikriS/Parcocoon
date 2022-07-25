@@ -6,103 +6,121 @@
     android:layout_height="match_parent"
     tools:context=".DiskusiFragment">
 
-    <EditText
-        android:id="@+id/Tv_inputPesan"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/rounded_rectangle"
-        android:gravity="left"
-        android:hint="@string/masukan_pesan"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textAlignment="gravity"
-        android:textColorHint="@color/grey"
-        android:textSize="16sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerViewDFragment"
-        tools:ignore="Autofill,RtlHardcoded,TextViewEdits" />
-
-    <ImageView
-        android:id="@+id/ImageViewSend"
-        android:layout_width="43dp"
-        android:layout_height="43dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="12dp"
-        android:src="@drawable/ic_send"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:ignore="ContentDescription" />
-
-    <View
-        android:id="@+id/viewDiskusi"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:background="@color/ColorPrimary"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/tvdiskusipet"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="12dp"
-        android:fontFamily="@font/abril_fatface"
-        android:text="@string/parcocoon_petshop"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/viewDiskusi" />
-
-    <TextView
-        android:id="@+id/tv_diskusi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:fontFamily="@font/amaranth"
-        android:text="@string/forum_diskusi_tentang_hewan_peliharaan"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvdiskusipet" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewDFragment"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/inputField"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
-        android:layout_marginBottom="64dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/viewDiskusi" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/Tv_inputPesan"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="64dp"
+            android:background="@drawable/rounded_rectangle"
+            android:gravity="left"
+            android:hint="@string/masukan_pesan"
+            android:inputType="text"
+            android:padding="10dp"
+            android:textAlignment="gravity"
+            android:textColorHint="@color/grey"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill,RtlHardcoded,TextViewEdits" />
 
         <ImageView
-            android:id="@+id/btn_logout"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
-            android:layout_gravity="center"
-            android:paddingTop="16dp"
-            android:paddingEnd="8dp"
-            android:src="@drawable/ic_logout"
-            app:iconGravity="textTop"
+            android:id="@+id/ImageViewSend"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_send"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:tint="@color/white"
-            tools:ignore="ContentDescription,RtlSymmetry" />
+            tools:ignore="ContentDescription" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/inputField"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tolbar"
+        tools:listitem="@layout/diskusi_adapter" />
 
-    </LinearLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/viewDiskusi"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:background="@color/ColorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvdiskusipet"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/abril_fatface"
+            android:text="@string/parcocoon_petshop"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/viewDiskusi" />
+
+        <TextView
+            android:id="@+id/tv_diskusi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/amaranth"
+            android:text="@string/forum_diskusi_tentang_hewan_peliharaan"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvdiskusipet" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btn_logout"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:paddingTop="16dp"
+                android:paddingEnd="8dp"
+                android:src="@drawable/ic_logout"
+                app:iconGravity="textTop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/white"
+                tools:ignore="ContentDescription,RtlSymmetry" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
