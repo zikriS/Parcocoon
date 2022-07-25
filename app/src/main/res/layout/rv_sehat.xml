@@ -37,19 +37,15 @@
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/grooming" />
 
-        <TextView
-            android:id="@+id/tvDesc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif"
-            android:justificationMode="inter_word"
-            android:textColor="@color/black"
-            android:textSize="15sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toEndOf="@+id/title_image"
-            app:layout_constraintTop_toBottomOf="@+id/tvHeading"
-            tools:text="@string/selengkapnya" />
+        <Button
+            android:id="@+id/btn_selengkapnya"
+            android:layout_width="214dp"
+            android:layout_height="35dp"
+            android:text="Lihat Selengkapnya"
+            android:textColor="@color/white">
+
+        </Button>
+
     </LinearLayout>
 
 </LinearLayout>

@@ -13,8 +13,13 @@ class GroomingActivity : AppCompatActivity() {
         binding = ActivityInfoGroomingBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val txt = intent.getStringExtra("description")
+        val txtTitle = intent.getStringExtra("title")
         val img = intent.getIntExtra("banner", Int.MAX_VALUE)
+
         binding.tvItemDescrption.text = txt
+        binding.tvItemName.text = txtTitle
         binding.RVGrooming.setImageResource(img)
+
+
     }
 }

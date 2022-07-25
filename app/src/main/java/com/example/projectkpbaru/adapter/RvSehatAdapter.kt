@@ -27,14 +27,14 @@ class RvSehatAdapter(private val list: List<RVDataclass>, private val mContext:C
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         with(holder.binding) {
             tvHeading.text = list[position].TitlePram
-            holder.itemView.setOnClickListener{
+            btnSelengkapnya.setOnClickListener{
                 Intent(mContext, GroomingActivity::class.java).also {
                     it.putExtra("description", list[position].DescPram)
                     it.putExtra("banner", list[position].imagePram)
+                    it.putExtra("title", list[position].TitlePram)
                     mContext.startActivity(it)
                 }
             }
-            tvDesc.text = list[position].DescPram
             Glide.with(mContext).load(list[position].imagePram).fitCenter().into(titleImage)
         }
 
