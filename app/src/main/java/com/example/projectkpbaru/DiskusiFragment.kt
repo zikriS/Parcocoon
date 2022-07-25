@@ -19,8 +19,8 @@ import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 
 class DiskusiFragment : Fragment(R.layout.fragment_diskusi) {
-    private lateinit var binding: FragmentDiskusiBinding
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    private lateinit var binding : FragmentDiskusiBinding
+    override fun onViewCreated(view : View, savedInstanceState : Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentDiskusiBinding.bind(view)
         binding.btnLogout.setOnClickListener {
@@ -37,7 +37,7 @@ class DiskusiFragment : Fragment(R.layout.fragment_diskusi) {
             )
         }
 
-        val msgLIst: MutableList<Message> = mutableListOf()
+        val msgLIst : MutableList<Message> = mutableListOf()
         val adapter = ChatAdapter(msgLIst)
         binding.rvChat.adapter = adapter
         binding.rvChat.layoutManager = LinearLayoutManager(requireContext())
@@ -48,18 +48,19 @@ class DiskusiFragment : Fragment(R.layout.fragment_diskusi) {
         getMessage(adapter, msgLIst)
     }
 
-    private fun getMessage(adapter: ChatAdapter, msgLIst: MutableList<Message>) {
+
+    private fun getMessage(adapter : ChatAdapter, msgLIst : MutableList<Message>) {
         Firebase.database.getReference("chatData")
             .addValueEventListener(object : ValueEventListener {
-                override fun onDataChange(snapshot: DataSnapshot) {
+                override fun onDataChange(snapshot : DataSnapshot) {
                     if (snapshot.exists()) {
                         if (msgLIst.isEmpty()) {
-                            for (dataSnapshot in snapshot.children) {
+                            for (data in snapshot.children) {
                                 msgLIst.add(
                                     Message(
-                                        dataSnapshot.child("uid").value.toString(),
-                                        dataSnapshot.child("userName").value.toString(),
-                                        dataSnapshot.child("message").value.toString()
+                                        data.child("uid").value as String,
+                                        data.child("userName").value as String,
+                                        data.child("message").value as String
                                     )
                                 )
                                 adapter.notifyItemInserted(msgLIst.size - 1)
@@ -68,9 +69,9 @@ class DiskusiFragment : Fragment(R.layout.fragment_diskusi) {
                             with(snapshot.children.last()) {
                                 msgLIst.add(
                                     Message(
-                                        snapshot.child("uid").value as String,
-                                        snapshot.child("userName").value as String,
-                                        snapshot.child("message").value as String
+                                        this.child("uid").value as String,
+                                        this.child("userName").value as String,
+                                        this.child("message").value as String
                                     )
                                 )
                                 adapter.notifyItemInserted(msgLIst.size - 1)
@@ -79,24 +80,26 @@ class DiskusiFragment : Fragment(R.layout.fragment_diskusi) {
                     }
                 }
 
-                override fun onCancelled(error: DatabaseError) {
-                    Log.w(TAG, "onCancelled: Cancelled Listener")
+                override fun onCancelled(error : DatabaseError) {
+                    Log.w(TAG, "onCancelled: Error")
                 }
             })
     }
 
-    private fun sendMessage(uid: String, username: String, message: String) {
+    private fun sendMessage(uid : String, username : String, message : String) {
         val msg = Message(
             uid = uid,
             userName = username,
             message = message
         )
-        Firebase.database.getReference("chatData").push().setValue(msg)
-            .addOnCompleteListener { task ->
-                if (!task.isSuccessful) {
-                    Toast.makeText(requireContext(), "Pesan gagal dikirim", Toast.LENGTH_SHORT)
-                        .show()
-                }
+        binding.TvInputPesan.text.clear()
+        Firebase.database.getReference("chatData").push().setValue(msg).addOnCompleteListener {
+            if (it.isSuccessful) {
+                Toast.makeText(requireContext(), "Pesan Berhasil dikirim", Toast.LENGTH_SHORT)
+                    .show()
+            } else {
+                Toast.makeText(requireContext(), "Pesan Gagal dikirim", Toast.LENGTH_SHORT).show()
             }
+        }
     }
 }

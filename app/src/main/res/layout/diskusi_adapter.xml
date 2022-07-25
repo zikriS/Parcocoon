@@ -12,7 +12,7 @@
 
     <LinearLayout
         android:id="@+id/receivedMessageLayout"
-        android:layout_width="wrap_content"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginStart="16dp"
@@ -23,6 +23,7 @@
         tools:ignore="UselessParent">
 
         <TextView
+            android:layout_marginStart="5dp"
             android:id="@+id/senderName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -54,7 +55,7 @@
     <LinearLayout
         android:layout_marginStart="16dp"
         android:gravity="end"
-        android:layout_width="wrap_content"
+        android:layout_width="400dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
